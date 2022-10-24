@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Tip calculator app</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>SPLI</h1>
+      <h1>TTER</h1>
+    </header>
+    <main>
+      <section>
+        <form action="" method="post" id="input-form" onsubmit="return submitform()">
+          <div class="field-wrapper">
+            <label class="margin-bottom-small" for="input-bill">Bill</label>
+            <input id="input-bill" class="dollar-img"  placeholder="0"/>
+            <span class="error error-bill"></span>
+          </div>
+          <h4>Select Tip %</h3>
+          <div class="tip-grid">
+            <div class="tip-0 tip-active">
+              <input id="5Percent" name="tip%" type="radio" checked="checked" value=".05" />
+              <label for="5Percent">5%</label>
+            </div>
+            <div class="tip-1">
+              <input id="10Percent" name="tip%" type="radio" value=".10" />
+              <label for="10Percent">10%</label>
+            </div>
+            <div class="tip-2">
+              <input id="15Percent" name="tip%" type="radio" value=".15" />
+              <label for="15Percent">15%</label>
+            </div>
+            <div class="tip-3">
+              <input id="25Percent" name="tip%" type="radio" value=".25"/>
+              <label for="25Percent">25%</label>
+            </div>
+            <div class="tip-4">
+              <input id="50Percent" name="tip%" type="radio" value=".50"/>
+              <label for="50Percent">50%</label>
+            </div>
+            <div>
+              <input class="custom-tip" name="" type="number" placeholder="Custom" />
+            </div>
+          </div>
+          <div class="field-wrapper margin-top-medium">
+            <label class="margin-bottom-small" for="numberPeople">Number of People</label>
+            <input id="numberPeople" class="person-img" type="text" placeholder="0" />
+            <span class="error error-people"></span>
+          </div>
+          <input class="submit" type="submit" value="Submit">
+        </form>
+      </section>
+      <section class="display-output">
+        <div class="result-container">
+          <div class="result-label">
+            <h4>Tip Amount</h4>
+            <p>/ person</p>
+          </div>
+          <div>
+            <h2 class="result-tip-per">$0.00</h2>
+          </div>
+        </div>
+        <div class="result-container">
+          <div class="result-label">
+            <h4>Total</h4>
+            <p>/ person</p>
+          </div>
+          <div>
+            <h2 class="result-total-per">$0.00</h2>
+          </div>
+        </div>
+        <div class="result-container">
+          <div class="result-label">
+            <h4>Total Bill</h4>
+          </div>
+          <div>
+            <h2 class="result-total-bill">$0.00</h2>
+          </div>
+        </div>
+        <button class="reset" onclick="init()">RESET</button>
+      </section>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Mike West</a>.
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

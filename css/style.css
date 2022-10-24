@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Space Mono', monospace;
+}
+
+:root {
+  --dark-cyan: hsl(183, 100%, 15%);
+  --darkgray-cyan: hsl(172, 67%, 45%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* LAYOUT */
+body {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  background-color: var(--light-grayish-cyan);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 20px;
+}
+
+/* FORM STYLE */
+form input {
+  font-size: 24px;
+  font-family: 'Space Mono', monospace;
+}
+
+.margin-bottom-small {
+  margin-bottom: 1rem;
+}
+
+.margin-bottom-medium {
+  margin-bottom: 2rem;
+}
+
+.margin-top-medium {
+  margin-top: 2rem;
+}
+
+section {
+  padding: 2rem;
+  border-radius: 15px;
+}
+
+.display-output {
+  background-color: var(--dark-cyan);
+}
+
+.display-output h4 {
+  color: white;
+}
+.display-output p {
+  color: var(--light-grayish-cyan);
+}
+
+.field-wrapper {
+  display: grid;
+}
+
+.field-wrapper input {
+  background-color: var(--very-light-grayish-cyan);
+  border: 1px solid hsla(185, 14%, 56%, 0.2);
+  border-radius: 5px;
+  text-align: right;
+  padding-right: 1rem;
+}
+
+/* Tip buttons */
+input[type='radio'] {
+  display: none;
+}
+
+/* Input focus outline style */
+input:focus {
+  outline-style: solid;
+  outline-color: var(--darkgray-cyan);
+}
+
+.tip-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.tip-grid input {
+  border: 1px solid var(--light-grayish-cyan);
+  border-radius: 5px;
+  width: 7rem;
+  padding: 2px 0;
+  background-color: var(--very-light-grayish-cyan);
+  text-align: center;
+}
+
+.tip-grid label:hover {
+  height: 100%;
+  background-color: var(--light-grayish-cyan);
+  color: var(--dark-cyan);
+  cursor: pointer;
+}
+
+.tip-grid label {
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  border-radius: 5px;
+  padding: 2px 0;
+}
+
+/* Remove number arrow display in browsers */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+footer {
+  margin: 1em;
+  text-align: right;
+}
+
+.submit {
+  width: 100%;
+  background-color: var(--very-light-grayish-cyan);
+  border-radius: 5px;
+  border: 1px solid var(--light-grayish-cyan);
+  border-radius: 5px;
+}
+
+.submit:hover {
+  background-color: var(--light-grayish-cyan);
+  cursor: pointer;
+}
+
+.reset {
+  width: 100%;
+  font-size: 24px;
+  padding: 2px 0;
+  font-family: 'Space Mono', monospace;
+  background-color: var(--darkgray-cyan);
+  color: var(--dark-cyan);
+  border: 0;
+  border-radius: 5px;
+}
+
+.reset:hover {
+  background-color: var(--light-grayish-cyan);
+  cursor: pointer;
+}
+
+.person-img {
+  background: url(../images/icon-person.svg) no-repeat 10px 10px;
+  padding-left: 2rem;
+}
+
+.dollar-img {
+  background: url(../images/icon-dollar.svg) no-repeat 10px 10px;
+  padding-left: 2rem;
+}
+
+.result-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h2 {
+  color: var(--darkgray-cyan);
+  padding: 0;
+  margin: 1.5rem 0;
+  font-size: 2.5em;
+}
+
+.result-label * {
+  margin: 0.5rem;
+}
+
+h1 {
+  text-align: center;
+  color: var(--dark-cyan);
+  padding: 0;
+  margin: 0;
+  letter-spacing: 4px;
+  font-size: 24px;
+}
+header {
+  margin: 4rem 0 3rem 0;
+}
+
+.tip-0,
+.tip-1,
+.tip-2,
+.tip-3,
+.tip-4 {
+  background-color: var(--dark-cyan);
+  border-radius: 5px;
+}
+
+.tip-active {
+  background-color: var(--darkgray-cyan);
+}
+
+.error {
+  text-align: right;
+  padding-right: 1rem;
+  color: red;
+  height: 2rem;
+}
+
+input {
+  color: var(--dark-cyan);
+}
+
+@media (max-width: 925px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  section {
+    padding: 2rem;
+  }
+  body {
+    max-width: 375px;
+    padding: 0;
+  }
+  main {
+    padding: 0;
+    margin: 0;
+  }
+  .tip-grid {
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+  }
+
+  .tip-grid div {
+    width: 8rem;
+  }
+  .tip-grid input {
+    width: 8rem;
+  }
+
+  form input {
+    width: 310px;
+  }
+  .display-output {
+    margin: 0 2rem 2rem 2rem;
+    padding: 1rem;
+  }
+  h2 {
+    font-size: 2em;
+  }
+}
